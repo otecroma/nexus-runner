@@ -1,4 +1,3 @@
-// ✅ Стабільний script.js з виправленням багу запуску після countdown
 let score = 0;
 let glitchLeft = window.innerWidth;
 let gameStarted = false;
@@ -44,7 +43,7 @@ pulseStyle.innerHTML = `
 document.head.appendChild(pulseStyle);
 
 function showCountdown(callback) {
-  if (countdownInProgress) return; // ⛔ блок повторного виклику
+  if (countdownInProgress) return;
   countdownInProgress = true;
 
   const countdownTexts = ["Linking...", "Connecting...", "Synced!"];
@@ -68,7 +67,7 @@ function showCountdown(callback) {
 function jump() {
   if (!cube.classList.contains("jump")) {
     cube.classList.add("jump");
-    setTimeout(() => cube.classList.remove("jump"), 500);
+    setTimeout(() => cube.classList.remove("jump"), 800);
   }
 }
 
@@ -81,6 +80,7 @@ function startGame() {
   glitchSpeed = 3;
   glitchLeft = window.innerWidth;
   scoreDisplay.textContent = "Nexus Points: 0";
+  cube.style.bottom = "50px"; // стартова позиція куба
   requestAnimationFrame(moveGlitch);
 }
 
@@ -129,7 +129,6 @@ function moveGlitch() {
   }
 
   const cubeBottom = parseInt(window.getComputedStyle(cube).getPropertyValue("bottom"));
-
   if (glitchLeft < 100 && glitchLeft > 50 && cubeBottom < 80) {
     gameOver();
     return;

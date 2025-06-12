@@ -205,3 +205,19 @@ canvas#particles-bg {
     padding: 8px 16px;
   }
 }
+/* CSS */
+#cube.jump {
+  animation: jump 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes jump {
+  0%   { bottom: 50px; }
+  60%  { bottom: 150px; }
+  100% { bottom: 50px; }
+}
+@media screen and (max-width: 768px) {
+  .game {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
