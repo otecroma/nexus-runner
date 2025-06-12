@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nexus Runner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Фон з молекулами -->
+  <canvas id="particles-bg"></canvas>
+
+  <!-- Гра -->
+  <div class="game">
+    <div class="track"></div>
+    <div id="score">Nexus Points: 0</div>
+    <img id="cube" src="images/nexus_cube.png" alt="Nexus Cube" />
+    <img id="glitch" src="images/glitch.png" alt="Glitch" />
+
+    <div id="game-over-screen">
+      <div id="game-over-box">
+        <p id="final-score-text">☠️ Game Over! Final Score: 0</p>
+        <button id="restart">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Надпис NEXUS -->
+  <div class="nexus-label">NEXUS</div>
+  
+
+  <!-- Стартовий екран -->
+  <div id="start-screen">Press SPACE or CLICK to start</div>
+
+  <!-- Футер -->
+  <footer class="nexus-footer">
+    <div class="socials">
+      <a href="https://x.com/NexusLabs" target="_blank">X</a>
+      <a href="https://discord.gg/pd3Afr5n" target="_blank">Discord</a>
+      <a href="https://nexus.xyz/" target="_blank">nexus.xyz</a>
+    </div>
+  </footer>
+
+  <!-- Скріпти -->
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
